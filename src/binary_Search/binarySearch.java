@@ -1,4 +1,4 @@
-package binary_search;
+package binary_Search;
 
 /**
  * 二分查找 模板

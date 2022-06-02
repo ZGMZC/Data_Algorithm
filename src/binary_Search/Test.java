@@ -1,4 +1,4 @@
-package binary_search;
+package binary_Search;
 
 public class Test {
     @org.junit.Test
