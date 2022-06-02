@@ -9,6 +9,10 @@
 - 前缀和(一维数组和二维数组)-pre_Sum
   - LeetCode 303
   - LeetCOde 304
+- 差分数组-diff_Num
+  - LeetCode 370
+  - LeetCode 1109
+  - LeetCode 1094
 - 滑动窗口-sliding_Window
   - LeetCode 76
   - LeetCode 567
