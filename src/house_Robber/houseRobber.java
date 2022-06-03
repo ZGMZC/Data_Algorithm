@@ -1,5 +1,7 @@
 package house_Robber;
 
+import common_Utils.TreeNode;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -74,16 +76,4 @@ public class houseRobber {
 
         return res;
     }
-    public class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode() {}
-      TreeNode(int val) { this.val = val; }
-      TreeNode(int val, TreeNode left, TreeNode right) {
-          this.val = val;
-          this.left = left;
-          this.right = right;
-      }
-  }
 }
