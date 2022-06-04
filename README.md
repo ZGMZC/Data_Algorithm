@@ -1,8 +1,11 @@
 ### 力扣刷题笔记
 > 笔者只写出了Java版本的模板，LeetCode对应题型已AC，但是还有很多可以优化的地方，如动态规划中可以使用变量储存相邻的那个状态等
 - 二分查找-binary_Search
-  - LeetCode 34
-  
+  - [LeetCode 34](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/)
+  - [LeetCode 704](https://leetcode.cn/problems/binary-search/)
+  - [LeetCode 875](https://leetcode.cn/problems/koko-eating-bananas/)
+  - [LeetCode 1011](https://leetcode.cn/problems/capacity-to-ship-packages-within-d-days/)
+  - [LeetCode 410](https://leetcode.cn/problems/split-array-largest-sum/)
 - 打家劫舍（动态规划||递归回溯）-house_Robber
   - LeetCode 198
   - LeetCode 213
@@ -15,10 +18,10 @@
   - LeetCode 1109
   - LeetCode 1094
 - 滑动窗口-sliding_Window
-  - LeetCode 76
-  - LeetCode 567
-  - LeetCode 438
-  - LeetCode 3
+  - [LeetCode 76](https://leetcode.cn/problems/minimum-window-substring/)
+  - [LeetCode 567](https://leetcode.cn/problems/permutation-in-string/)
+  - [LeetCode 438](https://leetcode.cn/problems/find-all-anagrams-in-a-string/)
+  - [LeetCode 3](https://leetcode.cn/problems/longest-substring-without-repeating-characters/)
 - 股票交易（动态规划模板）-stock_Trading
   - LeetCode 121
   - LeetCode 122
