@@ -10,6 +10,10 @@
   - LeetCode 198
   - LeetCode 213
   - LeetCode 337
+- 单调栈-monotonic_Stack
+  - [LeetCode 496](https://leetcode.cn/problems/next-greater-element-i/)
+  - [LeetCode 739](https://leetcode.cn/problems/daily-temperatures/)
+  - [LeetCode 503 下一个更大元素II](https://leetcode.cn/problems/next-greater-element-ii/)
 - 前缀和(一维数组和二维数组)-pre_Sum
   - LeetCode 303
   - LeetCOde 304
@@ -45,6 +49,12 @@
   - [LeetCode 167](https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/)
   - [LeetCode 344](https://leetcode.cn/problems/reverse-string/)
   - [LeetCode 5](https://leetcode.cn/problems/longest-palindromic-substring/)
+  - [LeetCode 870](https://leetcode.cn/problems/advantage-shuffle/)
+- 括号相关-valid_Parentheses
+  - [LeetCode 20](https://leetcode.cn/problems/valid-parentheses/)
+  - [LeetCode 921](https://leetcode.cn/problems/minimum-add-to-make-parentheses-valid/)
+  - [LeetCode 1541](https://leetcode.cn/problems/minimum-insertions-to-balance-a-parentheses-string/)
+- 链表递归-Page112
 - 通用工具类-common_Utils
 > 定义了常见的树结点、链表结点等。
 - Continuously updating......

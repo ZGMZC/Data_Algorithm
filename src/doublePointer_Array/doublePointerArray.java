@@ -1,5 +1,9 @@
 package doublePointer_Array;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 public class doublePointerArray {
     /**
      * LeetCode 26
@@ -134,5 +138,47 @@ public class doublePointerArray {
             l--; r++;
         }
         return s.substring(l+1,r);
+    }
+
+    /**
+     * LeetCode 870
+     * 给定两个大小相等的数组nums1和nums2，nums1相对于 nums的优势可以用满足nums1[i] > nums2[i]的索引 i的数目来描述。
+     *
+     * 返回 nums1的任意排列，使其相对于 nums2的优势最大化。
+     * @param nums1
+     * @param nums2
+     * @return
+     */
+    public int[] advantageCount(int[] nums1, int[] nums2){
+        int n=nums1.length;
+        //给nums2降序排序,因为需要保证nums2的顺序，所以将其下标保存起来
+        //用HashMap无法进行排序
+        PriorityQueue<int[]> maxpq=new PriorityQueue<>(new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o2[1]-o1[1];
+            }
+        });
+        for(int i=0;i<n;i++){
+            maxpq.offer(new int[]{i,nums2[i]});
+        }
+        //给nums1升序排序
+        Arrays.sort(nums1);
+
+        int left=0,right=n-1;
+        int[] res=new int[n];
+        while(!maxpq.isEmpty()){
+            int[] pair=maxpq.poll();
+            int i=pair[0], maxval = pair[1];
+            if(maxval<nums1[right]){
+                //如果nums[right]胜过对方
+                res[i]=nums1[right];
+                right--;
+            }else{
+                res[i]=nums1[left];
+                left++;
+            }
+        }
+        return res;
     }
 }
