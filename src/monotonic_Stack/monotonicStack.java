@@ -111,4 +111,67 @@ public class monotonicStack {
         }
         return res;
     }
+
+    /**
+     * LeetCode 239
+     * 给你一个整数数组 nums，有一个大小为k的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k个数字。滑动窗口每次只向右移动一位。
+     *
+     * 返回 滑动窗口中的最大值 。
+     * @param nums
+     * @param k
+     * @return
+     */
+    public int[] maxSlidingWindow(int[] nums, int k){
+        int n=nums.length;
+        int[] res=new int[n-k+1];
+        Deque<Integer> sta=new ArrayDeque<>();
+        int left=0;
+        for(int right=0;right<n;right++) {
+            while (!sta.isEmpty() && sta.peek() < nums[right])
+                sta.pop();
+            sta.push(nums[right]);
+            if (right >= k-1 && left < n - k + 1) {
+                res[left] = sta.getLast();
+                if (nums[left] == res[left])
+                    sta.removeLast();
+                left++;
+            }
+        }
+        return res;
+    }
+
+    /**
+     * LeetCode 316
+     * 给你一个字符串 s ，请你去除字符串中重复的字母，使得每个字母只出现一次。
+     * 需保证 返回结果的字典序最小（要求不能打乱其他字符的相对位置）。
+     * @param s
+     * @return
+     */
+    public String removeDuplicateLetters(String s){
+        Deque<Character> sta=new ArrayDeque<>();
+        //维护一个计数器记录字符串中字符的数量
+        int[] count=new int[256];
+        for (int i=0;i<s.length();i++){
+            count[s.charAt(i)]++;
+        }
+        //判断字符串中的字符是否出现过
+        boolean[] instack=new boolean[256];
+        for(char c:s.toCharArray()){
+            // 每遍历过一个字符，都将对应的计数减一
+            count[c]--;
+            //若栈中已存在c，跳过   去重
+            if(instack[c]) continue;
+            while(!sta.isEmpty()&& sta.peek()>c){
+                if(count[sta.peek()]==0)
+                    break;
+                instack[sta.pop()]=false;
+            }
+            sta.push(c);
+            instack[c]=true;
+        }
+        StringBuilder sb=new StringBuilder();
+        while(!sta.isEmpty())
+            sb.append(sta.pop());
+        return sb.reverse().toString();
+    }
 }

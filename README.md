@@ -14,6 +14,9 @@
   - [LeetCode 496](https://leetcode.cn/problems/next-greater-element-i/)
   - [LeetCode 739](https://leetcode.cn/problems/daily-temperatures/)
   - [LeetCode 503 下一个更大元素II](https://leetcode.cn/problems/next-greater-element-ii/)
+  - [LeetCode 239 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/)
+  - [LeetCode 316 去除重复字母](https://leetcode.cn/problems/remove-duplicate-letters/)
+  - [LeetCode 1081 不同字符的最小子序列](https://leetcode.cn/problems/smallest-subsequence-of-distinct-characters/)
 - 前缀和(一维数组和二维数组)-pre_Sum
   - LeetCode 303
   - LeetCOde 304
@@ -54,8 +57,13 @@
   - [LeetCode 20](https://leetcode.cn/problems/valid-parentheses/)
   - [LeetCode 921](https://leetcode.cn/problems/minimum-add-to-make-parentheses-valid/)
   - [LeetCode 1541](https://leetcode.cn/problems/minimum-insertions-to-balance-a-parentheses-string/)
+- 数据设计题-data_Design
+  - [LeetCode 146 LRU缓存](https://leetcode.cn/problems/lru-cache/)
+  - [LeetCode 460 LFU缓存](https://leetcode.cn/problems/lfu-cache/)
 - 链表递归-Page112
 - 通用工具类-common_Utils
-> 定义了常见的树结点、链表结点等。
+  - 树结点-TreeNode
+  - 单链表结点-ListNode
+  - 双链表结点-DoubleListNode
 - Continuously updating......
 
