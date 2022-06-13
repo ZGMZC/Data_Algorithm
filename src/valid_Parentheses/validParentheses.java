@@ -48,25 +48,25 @@ public class validParentheses {
      */
     /*核心思路是以左括号为基准，通过维护对右括号的需求数 need，来计算最小的插入次数*/
     public int minAddToMakeValid(String s){
-        // res 记录插入次数
-        int res=0;
-        // need 变量记录右括号的需求量
-        int need=0;
+        // left 变量记录左括号的插入量
+        int left=0;
+        // right 变量记录右括号的需求量
+        int right=0;
         for(int i=0;i<s.length();i++){
             if(s.charAt(i)=='(')
                 //对右括号的需求+1
-                need++;
+                right++;
             else{
                 //对右括号的需求-1
-                need--;
-                if(need==-1){
-                    need=0;
+                right--;
+                if(right==-1){
+                    right=0;
                     //需要插入一个左括号
-                    res++;
+                    left++;
                 }
             }
         }
-        return res+need;
+        return left+right;
     }
 
     /**
@@ -82,23 +82,23 @@ public class validParentheses {
      * @return
      */
     public int minInsertions(String s){
-        int res=0,need=0;
+        int left=0,right=0;
         for(int i=0;i<s.length();i++){
             if(s.charAt(i)=='('){
-                need+=2;
-                if(need%2==1){
-                    res++;
-                    need--;
+                right+=2;
+                if(right%2==1){
+                    left++;
+                    right--;
                 }
             }
             else{
-                need--;
-                if(need==-1){
-                    res++;
-                    need=1;
+                right--;
+                if(right==-1){
+                    left++;
+                    right=1;
                 }
             }
         }
-        return res+need;
+        return left+right;
     }
 }

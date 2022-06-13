@@ -160,7 +160,7 @@ public class binarySearch {
      * @param days
      * @return
      */
-    /*设运载能力为x，f（x）运载完货物所需要的天数为*/
+    /*设运载能力为x，f（x）为运载完货物所需要的天数*/
     public int shipWithinDays(int[] weights, int days){
         //最低运载能力
         int left=0;
@@ -200,7 +200,7 @@ public class binarySearch {
      * LeetCode 410
      * 给定一个非负整数数组 nums 和一个整数 m ，你需要将这个数组分成 m 个非空的连续子数组。
      * 设计一个算法使得这 m 个子数组各自和的最大值最小。
-     * 该题目与LeetCode 1011 相似，不过是换了一种说法，题目的设计。
+     * 该题目与LeetCode 1011 相似，不过是换了一种说法，题目的设计相同。
      * @param nums
      * @param m
      * @return
@@ -229,7 +229,7 @@ public class binarySearch {
         for(int i=0;i<nums.length;){
             int tmp=x;
             while(i<nums.length){
-                if(nums[i]<tmp) break;
+                if(tmp<nums[i]) break;
                 else tmp-=nums[i];
                 i++;
             }

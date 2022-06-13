@@ -98,7 +98,7 @@ public class diffNum {
         init(nums);
         for(int[] trip:trips){
             int i=trip[1];
-            //在trip[2]位置下车，乘客在⻋上的区间是 [trip[1], trip[2] - 1]
+            //在trip[2]位置下车，乘客在车上的区间是 [trip[1], trip[2] - 1]
             int j=trip[2]-1;
             int val=trip[0];
             increment(i,j,val);

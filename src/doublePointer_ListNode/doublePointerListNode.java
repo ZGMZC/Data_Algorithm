@@ -47,7 +47,7 @@ public class doublePointerListNode {
         }
         return p.next;
     }
-    /*方法二，使用优先级队列（二叉堆）把链表节点放入⼀个最小堆，就可以每次获得 k 个
+    /*方法二，使用优先级队列（二叉堆）把链表节点放入一个最小堆，就可以每次获得 k 个
 节点中的最小节点*/
     public ListNode mergeKLists_1(ListNode[] lists){
         if(lists.length==0) return null;

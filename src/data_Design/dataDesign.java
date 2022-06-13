@@ -35,7 +35,7 @@ class LRUCache {
         DoubleListNode tmp=map.get(key);
         cache.remove(tmp);
         cache.addLast(tmp);
-        return map.get(key).val;
+        return tmp.val;
     }
     public void put(int key, int value) {
         if(map.containsKey(key)){
