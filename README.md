@@ -60,6 +60,9 @@
 - 数据设计题-data_Design
   - [LeetCode 146 LRU缓存](https://leetcode.cn/problems/lru-cache/)
   - [LeetCode 460 LFU缓存](https://leetcode.cn/problems/lfu-cache/)
+  - [LeetCode 380 O(1)时间插入、删除和获取随机元素](https://leetcode.cn/problems/lfu-cache/)
+  - [LeetCode 710 黑名单中的随机数](https://leetcode.cn/problems/lfu-cache/)
+  - [LeetCode 295 数据流的中位数（困难）--未完成](https://leetcode.cn/problems/find-median-from-data-stream/)
 - 链表递归-listnode_Recursion
   - [LeetCode 206 反转链表](https://leetcode.cn/problems/reverse-linked-list/)
   - [LeetCode 92 反转链表II](https://leetcode.cn/problems/reverse-linked-list-ii/)
