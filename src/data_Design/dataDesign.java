@@ -6,6 +6,165 @@ import java.util.*;
 
 public class dataDesign {
 
+    /**
+     * LeetCode 224 基本计算器
+     * 给你一个字符串表达式 s ，请你实现一个基本计算器来计算并返回它的值。
+     *
+     * 注意:不允许使用任何将字符串作为数学表达式计算的内置函数，比如 eval() 。
+     * @param s
+     * @return
+     */
+    public int calculate_0(String s) {
+        // 存放所有的数字
+        Deque<Integer> nums = new ArrayDeque<>();
+        // 为了防止第一个数为负数，先往 nums 加个 0
+        nums.addLast(0);
+        // 将所有的空格去掉
+        s = s.replaceAll(" ", "");
+        // 存放所有的操作，包括 +/-
+        Deque<Character> ops = new ArrayDeque<>();
+        int n = s.length();
+        char[] cs = s.toCharArray();
+        for (int i = 0; i < n; i++) {
+            char c = cs[i];
+            if (c == '(') {
+                ops.addLast(c);
+            } else if (c == ')') {
+                // 计算到最近一个左括号为止
+                while (!ops.isEmpty()) {
+                    char op = ops.peekLast();
+                    if (op != '(') {
+                        calc_0(nums, ops);
+                    } else {
+                        ops.pollLast();
+                        break;
+                    }
+                }
+            } else {
+                if (isNum_0(c)) {
+                    int u = 0;
+                    int j = i;
+                    // 将从 i 位置开始后面的连续数字整体取出，加入 nums
+                    while (j < n && isNum_0(cs[j])) u = u * 10 + (int)(cs[j++] - '0');
+                    nums.addLast(u);
+                    i = j - 1;
+                } else {
+                    if (i > 0 && (cs[i - 1] == '(' || cs[i - 1] == '+' || cs[i - 1] == '-')) {
+                        nums.addLast(0);
+                    }
+                    // 有一个新操作要入栈时，先把栈内可以算的都算了
+                    while (!ops.isEmpty() && ops.peekLast() != '(') calc_0(nums, ops);
+                    ops.addLast(c);
+                }
+            }
+        }
+        while (!ops.isEmpty()) calc_0(nums, ops);
+        return nums.peekLast();
+    }
+    void calc_0(Deque<Integer> nums, Deque<Character> ops) {
+        if (nums.isEmpty() || nums.size() < 2) return;
+        if (ops.isEmpty()) return;
+        int b = nums.pollLast(), a = nums.pollLast();
+        char op = ops.pollLast();
+        nums.addLast(op == '+' ? a + b : a - b);
+    }
+    boolean isNum_0(char c) {
+        return Character.isDigit(c);
+    }
+
+    /**
+     * LeetCode 227
+     * 给你一个字符串表达式 s ，请你实现一个基本计算器来计算并返回它的值。
+     *
+     * 整数除法仅保留整数部分。
+     *
+     * 你可以假设给定的表达式总是有效的。所有中间结果将在 [-231, 231 - 1] 的范围内。
+     *
+     * 注意：不允许使用任何将字符串作为数学表达式计算的内置函数，比如 eval() 。
+     *
+     */
+    // 使用 map 维护一个运算符优先级
+    // 这里的优先级划分按照「数学」进行划分即可
+    Map<Character, Integer> map = new HashMap<Character, Integer>(){{
+        put('-', 1);
+        put('+', 1);
+        put('*', 2);
+        put('/', 2);
+        put('%', 2);
+        put('^', 3);
+    }};
+    public int calculate_1(String s) {
+        // 将所有的空格去掉
+        s = s.replaceAll(" ", "");
+        char[] cs = s.toCharArray();
+        int n = s.length();
+        // 存放所有的数字
+        Deque<Integer> nums = new ArrayDeque<>();
+        // 为了防止第一个数为负数，先往 nums 加个 0
+        nums.addLast(0);
+        // 存放所有「非数字以外」的操作
+        Deque<Character> ops = new ArrayDeque<>();
+        for (int i = 0; i < n; i++) {
+            char c = cs[i];
+            if (c == '(') {
+                ops.addLast(c);
+            } else if (c == ')') {
+                // 计算到最近一个左括号为止
+                while (!ops.isEmpty()) {
+                    if (ops.peekLast() != '(') {
+                        calc_1(nums, ops);
+                    } else {
+                        ops.pollLast();
+                        break;
+                    }
+                }
+            } else {
+                if (isNum_1(c)) {
+                    int u = 0;
+                    int j = i;
+                    // 将从 i 位置开始后面的连续数字整体取出，加入 nums
+                    while (j < n && isNum_1(cs[j])) u = u * 10 + (cs[j++] - '0');
+                    nums.addLast(u);
+                    i = j - 1;
+                } else {
+                    if (i > 0 && (cs[i - 1] == '(' || cs[i - 1] == '+' || cs[i - 1] == '-')) {
+                        nums.addLast(0);
+                    }
+                    // 有一个新操作要入栈时，先把栈内可以算的都算了
+                    // 只有满足「栈内运算符」比「当前运算符」优先级高/同等，才进行运算
+                    while (!ops.isEmpty() && ops.peekLast() != '(') {
+                        char prev = ops.peekLast();
+                        if (map.get(prev) >= map.get(c)) {
+                            calc_1(nums, ops);
+                        } else {
+                            break;
+                        }
+                    }
+                    ops.addLast(c);
+                }
+            }
+        }
+        // 将剩余的计算完
+        while (!ops.isEmpty()) calc_1(nums, ops);
+        return nums.peekLast();
+    }
+    void calc_1(Deque<Integer> nums, Deque<Character> ops) {
+        if (nums.isEmpty() || nums.size() < 2) return;
+        if (ops.isEmpty()) return;
+        int b = nums.pollLast(), a = nums.pollLast();
+        char op = ops.pollLast();
+        int ans = 0;
+        if (op == '+') ans = a + b;
+        else if (op == '-') ans = a - b;
+        else if (op == '*') ans = a * b;
+        else if (op == '/')  ans = a / b;
+        else if (op == '^') ans = (int)Math.pow(a, b);
+        else if (op == '%') ans = a % b;
+        nums.addLast(ans);
+    }
+    boolean isNum_1(char c) {
+        return Character.isDigit(c);
+    }
 
 }
 
@@ -296,16 +455,29 @@ class Solution {
  * double findMedian() - 返回目前所有元素的中位数。
  */
 class MedianFinder {
-
+    //大顶堆
+    private PriorityQueue<Integer> large;
+    //小顶堆
+    private PriorityQueue<Integer> small;
     public MedianFinder() {
-
+        large=new PriorityQueue<>(((o1, o2) -> (o2-o1)));
+        small=new PriorityQueue<>();
     }
-
     public void addNum(int num) {
-
+        if(small.size()>=large.size()){
+            small.offer(num);
+            large.offer(small.poll());
+        }else{
+            large.offer(num);
+            small.offer(large.poll());
+        }
     }
 
     public double findMedian() {
-
+        if(large.size()<small.size()){
+            return small.peek();
+        }else if(large.size()>small.size()){
+            return large.size();
+        }else return (large.size()+small.size())/2;
     }
 }

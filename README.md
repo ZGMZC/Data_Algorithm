@@ -62,10 +62,17 @@
   - [LeetCode 460 LFU缓存](https://leetcode.cn/problems/lfu-cache/)
   - [LeetCode 380 O(1)时间插入、删除和获取随机元素](https://leetcode.cn/problems/lfu-cache/)
   - [LeetCode 710 黑名单中的随机数](https://leetcode.cn/problems/lfu-cache/)
-  - [LeetCode 295 数据流的中位数（困难）--未完成](https://leetcode.cn/problems/find-median-from-data-stream/)
+  - [LeetCode 295 数据流的中位数](https://leetcode.cn/problems/find-median-from-data-stream/)
+  - [LeetCode 224 基本计算器](https://leetcode.cn/problems/basic-calculator/)
+  - [LeetCode 227 基本计算器II](https://leetcode.cn/problems/basic-calculator-ii/)
+  - [LeetCode 772 基本计算器III](https://leetcode.cn/problems/basic-calculator-iii/)
 - 链表递归-listnode_Recursion
   - [LeetCode 206 反转链表](https://leetcode.cn/problems/reverse-linked-list/)
   - [LeetCode 92 反转链表II](https://leetcode.cn/problems/reverse-linked-list-ii/)
+- 二叉树-binary_Tree
+  - [LeetCode 104 二叉树的最大深度](https://leetcode.cn/problems/maximum-depth-of-binary-tree/)
+  - [LeetCode 543 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/)
+  - [LeetCode 144 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode
