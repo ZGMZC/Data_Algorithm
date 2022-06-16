@@ -73,6 +73,11 @@
   - [LeetCode 104 二叉树的最大深度](https://leetcode.cn/problems/maximum-depth-of-binary-tree/)
   - [LeetCode 543 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/)
   - [LeetCode 144 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
+  - [LeetCode 226 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/)
+  - [LeetCode 144 二叉树展开为链表](https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/)
+  - [LeetCode 144 填充每个节点的下一个右侧节点指针](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/)
+  - [LeetCode 654 最大二叉树](https://leetcode.cn/problems/maximum-binary-tree/)
+  - [LeetCode 105 从前序和中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode
