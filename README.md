@@ -78,6 +78,15 @@
   - [LeetCode 144 填充每个节点的下一个右侧节点指针](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/)
   - [LeetCode 654 最大二叉树](https://leetcode.cn/problems/maximum-binary-tree/)
   - [LeetCode 105 从前序和中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+  - [LeetCode 106 从中序和后续遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+  - [LeetCode 889 从前序和后续遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal/)
+  - [LeetCode 297 二叉树的序列化与反序列化](https://leetcode.cn/problems/serialize-and-deserialize-binary-tree/)
+  - [LeetCode 652 寻找重复的子树](https://leetcode.cn/problems/find-duplicate-subtrees/)
+- 归并排序-summarize_Sort
+  - [LeetCode 912 排序数组](https://leetcode.cn/problems/sort-an-array/)
+  - [LeetCode 315 计算右侧小于当前元素的个数](https://leetcode.cn/problems/count-of-smaller-numbers-after-self/)
+  - [LeetCode 493 翻转对](https://leetcode.cn/problems/reverse-pairs/)
+  - [LeetCode 327 区间和的个数](https://leetcode.cn/problems/count-of-range-sum/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode
