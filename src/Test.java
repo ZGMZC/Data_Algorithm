@@ -1,3 +1,5 @@
+import quick_Sort.quickSort;
+
 import java.util.*;
 
 public class Test {
@@ -26,5 +28,13 @@ public class Test {
             }
         });
         System.out.println(list.toString());
+    }
+    @org.junit.Test
+    public void two(){
+        quickSort quickSort=new quickSort();
+        int[] nums=new int[]{5,2,3,1,2};
+        quickSort.sort(nums,0,nums.length-1);
+        for(int i:nums)
+            System.out.println(i);
     }
 }

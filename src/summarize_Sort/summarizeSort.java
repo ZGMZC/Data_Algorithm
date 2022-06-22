@@ -190,7 +190,7 @@ public class summarizeSort {
     public int countRangeSum(int[] nums, int lower, int upper) {
         this.lower = lower;
         this.upper = upper;
-        // 构建前缀和数组，注意 int 可能溢出，⽤ long 存储
+        // 构建前缀和数组，注意 int 可能溢出，用 long 存储
         long[] preSum = new long[nums.length + 1];
         for (int i = 0; i < nums.length; i++) {
             preSum[i + 1] = (long)nums[i] + preSum[i];

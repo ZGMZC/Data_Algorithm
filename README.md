@@ -82,11 +82,27 @@
   - [LeetCode 889 从前序和后续遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal/)
   - [LeetCode 297 二叉树的序列化与反序列化](https://leetcode.cn/problems/serialize-and-deserialize-binary-tree/)
   - [LeetCode 652 寻找重复的子树](https://leetcode.cn/problems/find-duplicate-subtrees/)
+- 二叉搜索树-binarysearch_Tree
+  - [LeetCode 230 二叉搜索树中第K小的元素](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/)
+  - [LeetCode 538 把二叉搜索树转换为累加树](https://leetcode.cn/problems/convert-bst-to-greater-tree/)
+  - [LeetCode 450 删除二叉搜索树中的节点](https://leetcode.cn/problems/delete-node-in-a-bst/)
+  - [LeetCode 701 二叉搜索树中的插入操作](https://leetcode.cn/problems/insert-into-a-binary-search-tree/)
+  - [LeetCode 700 二叉搜索树中的搜索](https://leetcode.cn/problems/search-in-a-binary-search-tree/)
+  - [LeetCode 98 验证二叉搜索树](https://leetcode.cn/problems/validate-binary-search-tree/)
+  - [LeetCode 1038 把二叉搜索树转换为累加树](https://leetcode.cn/problems/binary-search-tree-to-greater-sum-tree/)
+  - [LeetCode 96 不同的二叉搜索树](https://leetcode.cn/problems/unique-binary-search-trees/)
+  - [LeetCode 95 不同的二叉搜索树II](https://leetcode.cn/problems/unique-binary-search-trees-ii/)
+  - [LeetCode 1373 二叉搜索子树的最大键值和](https://leetcode.cn/problems/maximum-sum-bst-in-binary-tree/)
 - 归并排序-summarize_Sort
   - [LeetCode 912 排序数组](https://leetcode.cn/problems/sort-an-array/)
   - [LeetCode 315 计算右侧小于当前元素的个数](https://leetcode.cn/problems/count-of-smaller-numbers-after-self/)
   - [LeetCode 493 翻转对](https://leetcode.cn/problems/reverse-pairs/)
   - [LeetCode 327 区间和的个数](https://leetcode.cn/problems/count-of-range-sum/)
+- 快速排序-quick_Sort
+  - [LeetCode 912 排序数组（中等）](https://leetcode.cn/problems/sort-an-array/)
+  - [LeetCode 215 数组中的第K个最大元素（中等）](https://leetcode.cn/problems/kth-largest-element-in-an-array/)
+- 图-Figure
+  - [LeetCode 797 所有可能的路径](https://leetcode.cn/problems/all-paths-from-source-to-target/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode
