@@ -103,6 +103,8 @@
   - [LeetCode 215 数组中的第K个最大元素（中等）](https://leetcode.cn/problems/kth-largest-element-in-an-array/)
 - 图-Figure
   - [LeetCode 797 所有可能的路径](https://leetcode.cn/problems/all-paths-from-source-to-target/)
+  - [LeetCode 207 课程表](https://leetcode.cn/problems/course-schedule/)
+  - [LeetCode 210 课程表II](https://leetcode.cn/problems/course-schedule-ii/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode
