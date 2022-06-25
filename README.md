@@ -105,6 +105,13 @@
   - [LeetCode 797 所有可能的路径](https://leetcode.cn/problems/all-paths-from-source-to-target/)
   - [LeetCode 207 课程表](https://leetcode.cn/problems/course-schedule/)
   - [LeetCode 210 课程表II](https://leetcode.cn/problems/course-schedule-ii/)
+- 二分图-dichotomous_Figure
+  - [LeetCode 785 判断二分图](https://leetcode.cn/problems/is-graph-bipartite/)
+  - [LeetCode 886 可能的二分法](https://leetcode.cn/problems/possible-bipartition/)
+- UnionFind算法-union_Find
+  - [LeetCode 130 被围绕的区域](https://leetcode.cn/problems/surrounded-regions/)
+  - [LeetCode 990 等式方程的可满足性](https://leetcode.cn/problems/satisfiability-of-equality-equations/)
+  - [LeetCode 323 无向图中连通分量的数目](https://leetcode.cn/problems/number-of-connected-components-in-an-undirected-graph/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode

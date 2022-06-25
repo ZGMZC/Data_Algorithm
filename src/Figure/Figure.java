@@ -1,8 +1,6 @@
 package Figure;
 
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Figure {
     /**
@@ -13,6 +11,7 @@ public class Figure {
      * @param graph
      * @return
      */
+    /*DFS*/
     List<List<Integer>> res=new LinkedList<>();
     public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
         //维护递归过程中经过的路径
@@ -45,7 +44,7 @@ public class Figure {
      */
     /*DFS*/
     boolean[] visit;
-    public boolean canFinish(int numCourses, int[][] prerequisites) {
+    public boolean canFinish_0(int numCourses, int[][] prerequisites) {
         List<Integer>[] graph=buildGraph(numCourses,prerequisites);
         visit=new boolean[numCourses];
         onPath=new boolean[numCourses];
@@ -78,13 +77,43 @@ public class Figure {
         }
         return graph;
     }
+    /*BFS*/
+    public boolean canFinish_1(int numCourses, int[][] prerequisites) {
+        // 建图，有向边代表「被依赖」关系
+        List<Integer>[] graph = buildGraph(numCourses, prerequisites);
+        // 构建入度数组
+        int[] indegree = new int[numCourses];
+        for (int[] edge : prerequisites) {
+            int from = edge[1], to = edge[0];
+            // 节点 to 的入度加一
+            indegree[to]++;
+        }
+        Deque<Integer> q=new ArrayDeque<>();
+        for(int i=0;i<numCourses;i++){
+            if(indegree[i]==0)
+                q.offer(i);
+        }
+        int count=0;
+        while (!q.isEmpty()){
+            int cur=q.poll();
+            count++;
+            for (int v:graph[cur]){
+                indegree[v]--;
+                if(indegree[v]==0)
+                    q.offer(v);
+            }
+        }
+        return count==numCourses;
+    }
+
     /**
      * LeetCode 210
      * 现在你总共有 numCourses 门课需要选，记为0到numCourses - 1。给你一个数组prerequisites ，其中 prerequisites[i] = [ai, bi] ，表示在选修课程 ai 前 必须 先选修bi
      返回你为了学完所有课程所安排的学习顺序。可能会有多个正确的顺序，你只要返回 任意一种 就可以了。如果不可能完成所有课程，返回 一个空数组 。
      */
+    /*DFS*/
     List<Integer> postorder;
-    public int[] findOrder(int numCourses, int[][] prerequisites) {
+    public int[] findOrder_0(int numCourses, int[][] prerequisites) {
         List<Integer>[] graph=buildGraph(numCourses,prerequisites);
         onPath=new boolean[numCourses];
         visit=new boolean[numCourses];
@@ -109,5 +138,33 @@ public class Figure {
         }
         postorder.add(s);
         onPath[s]=false;
+    }
+    /*BFS*/
+    public int[] findOrder_1(int numCourses, int[][] prerequisites){
+        List<Integer>[] graph=buildGraph(numCourses,prerequisites);
+        int[] indegree=new int[numCourses];
+        for(int[] edge:prerequisites){
+            int from=edge[1],to=edge[0];
+            indegree[to]++;
+        }
+        Deque<Integer> q=new ArrayDeque<>();
+        for(int i=0;i<numCourses;i++){
+            if(indegree[i]==0) q.offer(i);
+        }
+        int[] res=new int[numCourses];
+        int count=0;
+        while (!q.isEmpty()){
+            int cur=q.poll();
+            res[count]=cur;
+            count++;
+            for(int v:graph[cur]){
+                indegree[v]--;
+                if(indegree[v]==0)
+                    q.offer(v);
+            }
+        }
+        if(count!=numCourses)
+            return new int[]{};
+        return res;
     }
 }
