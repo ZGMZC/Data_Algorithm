@@ -108,10 +108,21 @@
 - 二分图-dichotomous_Figure
   - [LeetCode 785 判断二分图](https://leetcode.cn/problems/is-graph-bipartite/)
   - [LeetCode 886 可能的二分法](https://leetcode.cn/problems/possible-bipartition/)
-- UnionFind算法-union_Find
+- UnionFind算法-union_Find(未完成P329)
   - [LeetCode 130 被围绕的区域](https://leetcode.cn/problems/surrounded-regions/)
   - [LeetCode 990 等式方程的可满足性](https://leetcode.cn/problems/satisfiability-of-equality-equations/)
   - [LeetCode 323 无向图中连通分量的数目](https://leetcode.cn/problems/number-of-connected-components-in-an-undirected-graph/)
+- Kruskal最小生成树算法-Kruskal
+  - [LeetCode 261 以图判树](https://leetcode.cn/problems/graph-valid-tree/)
+  - [LeetCode 1135 最低成本联通所有城市](https://leetcode.cn/problems/connecting-cities-with-minimum-cost/)
+  - [LeetCode 1584 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points/)
+- Prim最小生成树算法-Prim
+  - [LeetCode 1135 最低成本联通所有城市](https://leetcode.cn/problems/connecting-cities-with-minimum-cost/)
+  - [LeetCode 1584 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points/)
+- Dijkstra最短路径算法-Dijkstra
+  - [LeetCode 743 网络延迟时间](https://leetcode.cn/problems/network-delay-time/)
+  - [LeetCode 1514 概率最大的路径](https://leetcode.cn/problems/path-with-maximum-probability/)
+  - [LeetCode 1631 最小体力消耗路径](https://leetcode.cn/problems/path-with-minimum-effort/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode
