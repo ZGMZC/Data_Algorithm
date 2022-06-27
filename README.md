@@ -119,10 +119,13 @@
 - Prim最小生成树算法-Prim
   - [LeetCode 1135 最低成本联通所有城市](https://leetcode.cn/problems/connecting-cities-with-minimum-cost/)
   - [LeetCode 1584 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points/)
-- Dijkstra最短路径算法-Dijkstra
+- Dijkstra最短路径算法-Dijkstra（巩固）
   - [LeetCode 743 网络延迟时间](https://leetcode.cn/problems/network-delay-time/)
   - [LeetCode 1514 概率最大的路径](https://leetcode.cn/problems/path-with-maximum-probability/)
   - [LeetCode 1631 最小体力消耗路径](https://leetcode.cn/problems/path-with-minimum-effort/)
+- 回溯算法-Backtrack.Backtrack
+  - [LeetCode 46 全排列](https://leetcode.cn/problems/permutations/)
+  - [LeetCode 51 N皇后](https://leetcode.cn/problems/n-queens/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode
