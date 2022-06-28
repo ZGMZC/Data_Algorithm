@@ -126,6 +126,7 @@
 - 回溯算法-Backtrack.Backtrack
   - [LeetCode 46 全排列](https://leetcode.cn/problems/permutations/)
   - [LeetCode 51 N皇后](https://leetcode.cn/problems/n-queens/)
+  - [LeetCode 698 划分为k个相等的子集](https://leetcode.cn/problems/partition-to-k-equal-sum-subsets/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode
