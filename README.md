@@ -127,6 +127,19 @@
   - [LeetCode 46 全排列](https://leetcode.cn/problems/permutations/)
   - [LeetCode 51 N皇后](https://leetcode.cn/problems/n-queens/)
   - [LeetCode 698 划分为k个相等的子集](https://leetcode.cn/problems/partition-to-k-equal-sum-subsets/)
+  - [LeetCode 78 子集](https://leetcode.cn/problems/subsets/)
+  - [LeetCode 77 组合](https://leetcode.cn/problems/combinations/)
+  - [LeetCode 90 子集II](https://leetcode.cn/problems/subsets-ii/)
+  - [LeetCode 40 组合总数II](https://leetcode.cn/problems/combination-sum-ii/)
+  - [LeetCode 47 全排列II](https://leetcode.cn/problems/permutations-ii/)
+  - [LeetCode 39 组合综合](https://leetcode.cn/problems/combination-sum/)
+- 岛屿问题-island_Issues
+  - [LeetCode 200 岛屿数量](https://leetcode.cn/problems/number-of-islands/)
+  - [LeetCode 1254 统计封闭岛屿的数目](https://leetcode.cn/problems/number-of-closed-islands/)
+  - [LeetCode 1020 飞地的数量](https://leetcode.cn/problems/number-of-enclaves/)
+  - [LeetCode 695 岛屿的最大面积](https://leetcode.cn/problems/max-area-of-island/)
+  - [LeetCode 1905 统计子岛屿](https://leetcode.cn/problems/count-sub-islands/)
+  - [LeetCode 694 不同的岛屿数量](https://leetcode.cn/problems/number-of-distinct-islands/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode
