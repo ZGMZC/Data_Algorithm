@@ -123,7 +123,7 @@
   - [LeetCode 743 网络延迟时间](https://leetcode.cn/problems/network-delay-time/)
   - [LeetCode 1514 概率最大的路径](https://leetcode.cn/problems/path-with-maximum-probability/)
   - [LeetCode 1631 最小体力消耗路径](https://leetcode.cn/problems/path-with-minimum-effort/)
-- 回溯算法-Backtrack.Backtrack
+- 回溯算法DFS-Backtrack
   - [LeetCode 46 全排列](https://leetcode.cn/problems/permutations/)
   - [LeetCode 51 N皇后](https://leetcode.cn/problems/n-queens/)
   - [LeetCode 698 划分为k个相等的子集](https://leetcode.cn/problems/partition-to-k-equal-sum-subsets/)
@@ -140,6 +140,11 @@
   - [LeetCode 695 岛屿的最大面积](https://leetcode.cn/problems/max-area-of-island/)
   - [LeetCode 1905 统计子岛屿](https://leetcode.cn/problems/count-sub-islands/)
   - [LeetCode 694 不同的岛屿数量](https://leetcode.cn/problems/number-of-distinct-islands/)
+- 层序遍历BFS-BFS
+  - [LeetCode 111 二叉树的最小深度](https://leetcode.cn/problems/minimum-depth-of-binary-tree/)
+  - [LeetCode 752 打开转盘锁](https://leetcode.cn/problems/open-the-lock/)
+  - [LeetCode 773 滑动谜题](https://leetcode.cn/problems/sliding-puzzle/)
+  - 
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode
