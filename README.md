@@ -144,7 +144,10 @@
   - [LeetCode 111 二叉树的最小深度](https://leetcode.cn/problems/minimum-depth-of-binary-tree/)
   - [LeetCode 752 打开转盘锁](https://leetcode.cn/problems/open-the-lock/)
   - [LeetCode 773 滑动谜题](https://leetcode.cn/problems/sliding-puzzle/)
-  - 
+- 动态规划-dynamic_Programming
+  - [LeetCode 509 斐波那契数](https://leetcode.cn/problems/fibonacci-number/)
+  - [LeetCode 322 零钱兑换](https://leetcode.cn/problems/coin-change/)
+  - [LeetCode 931 下降路径最小和](https://leetcode.cn/problems/minimum-falling-path-sum/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode
