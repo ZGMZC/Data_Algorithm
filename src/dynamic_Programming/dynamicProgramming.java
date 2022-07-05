@@ -1,6 +1,7 @@
 package dynamic_Programming;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Map;
 
 /**
@@ -78,5 +79,112 @@ public class dynamicProgramming {
     }
     private int min(int a,int b,int c){
         return Math.min(a,Math.min(b,c));
+    }
+
+    /**
+     * LeetCode 300
+     * @param nums
+     * @return
+     */
+    public int lengthOfLIS(int[] nums) {
+        //dp[i] 表示以 nums[i] 这个数结尾的最长递增子序列的长度
+        int[] dp=new int[nums.length];
+        Arrays.fill(dp,1);
+        for(int i=0;i<nums.length;i++){
+            for(int j=0;j<i;j++){
+                if(nums[i]>nums[j])
+                dp[i]=Math.max(dp[i],dp[j]+1);
+            }
+        }
+        int res=0;
+        for(int i=0;i<nums.length;i++)
+            res=Math.max(res,dp[i]);
+        return res;
+    }
+
+    /**
+     * LeetCode 354
+     * @param envelopes
+     * @return
+     */
+    public int maxEnvelopes(int[][] envelopes) {
+        int n=envelopes.length;
+        Arrays.sort(envelopes, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o1[0]==o2[0]? o2[1]-o1[1]:o1[0]-o2[0];
+            }
+        });
+        int[] height=new int[n];
+        for (int i=0;i<n;i++){
+            height[i]=envelopes[i][1];
+        }
+        return lengthOfLIS_1(height);
+    }
+    private int lengthOfLIS_1(int[] nums){
+        int[] top=new int[nums.length];
+        int piles=0;
+        for(int i=0;i<nums.length;i++){
+            int poker=nums[i];
+            int left=0,right=piles;
+            while (left<right){
+                int mid=(left+right)/2;
+                if(top[mid]>poker) right=mid;
+                else if(top[mid]<poker) left=mid+1;
+                else right=mid;
+            }
+            if(right==piles) piles++;
+            top[left]=poker;
+        }
+        return piles;
+    }
+
+    /**
+     * LeetCode 53
+     * @param nums
+     * @return
+     */
+    public int maxSubArray(int[] nums) {
+        int n=nums.length;
+        int[] dp=new int[n];
+        int res=nums[0];
+        dp[0]=nums[0];
+        for(int i=1;i<n;i++){
+            dp[i]=Math.max(nums[i],dp[i-1]+nums[i]);
+            res=Math.max(res,dp[i]);
+        }
+        return res;
+    }
+
+    /**
+     * LeetCode 72
+     * @param word1
+     * @param word2
+     * @return
+     */
+    public int minDistance(String word1, String word2) {
+        int n=word1.length(),m=word2.length();
+        // 定义：s1[0..i] 和 s2[0..j] 的最⼩编辑距离是 dp[i+1][j+1]
+        int[][] dp=new int[n+1][m+1];
+        for (int i = 1; i <= m; i++)
+            dp[i][0] = i;
+        for (int j = 1; j <= n; j++)
+            dp[0][j] = j;
+        // 自底向上求解
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (word1.charAt(i-1) == word2.charAt(j-1)) {
+                    dp[i][j] = dp[i - 1][j - 1];
+                } else {
+                    dp[i][j] = min(
+                            dp[i - 1][j] + 1,
+                            dp[i][j - 1] + 1,
+                            dp[i - 1][j - 1] + 1
+                    );
+                }
+            }
+        }
+        // 储存着整个 s1 和 s2 的最小编辑距离
+        return dp[m][n];
     }
 }

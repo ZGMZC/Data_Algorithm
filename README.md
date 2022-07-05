@@ -148,6 +148,10 @@
   - [LeetCode 509 斐波那契数](https://leetcode.cn/problems/fibonacci-number/)
   - [LeetCode 322 零钱兑换](https://leetcode.cn/problems/coin-change/)
   - [LeetCode 931 下降路径最小和](https://leetcode.cn/problems/minimum-falling-path-sum/)
+  - [LeetCode 300 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/)
+  - [LeetCode 354 俄罗斯套娃信封问题](https://leetcode.cn/problems/russian-doll-envelopes/)
+  - [LeetCode 53 最大子数组和](https://leetcode.cn/problems/maximum-subarray/)
+  - [LeetCode 72 编辑距离](https://leetcode.cn/problems/edit-distance/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode
