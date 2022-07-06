@@ -152,6 +152,10 @@
   - [LeetCode 354 俄罗斯套娃信封问题](https://leetcode.cn/problems/russian-doll-envelopes/)
   - [LeetCode 53 最大子数组和](https://leetcode.cn/problems/maximum-subarray/)
   - [LeetCode 72 编辑距离](https://leetcode.cn/problems/edit-distance/)
+  - [LeetCode 1143 最长公共子序列](https://leetcode.cn/problems/longest-common-subsequence/)
+  - [LeetCode 583 两个字符串的删除操作](https://leetcode.cn/problems/delete-operation-for-two-strings/)
+  - [LeetCode 712 两个字符串的最小ASCII删除和](https://leetcode.cn/problems/minimum-ascii-delete-sum-for-two-strings/)
+  - [LeetCode 10 正则表达式匹配](https://leetcode.cn/problems/regular-expression-matching/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode

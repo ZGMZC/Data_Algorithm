@@ -164,7 +164,7 @@ public class dynamicProgramming {
      */
     public int minDistance(String word1, String word2) {
         int n=word1.length(),m=word2.length();
-        // 定义：s1[0..i] 和 s2[0..j] 的最⼩编辑距离是 dp[i+1][j+1]
+        // 定义：s1[0..i] 和 s2[0..j] 的最小编辑距离是 dp[i+1][j+1]
         int[][] dp=new int[n+1][m+1];
         for (int i = 1; i <= m; i++)
             dp[i][0] = i;
@@ -187,4 +187,125 @@ public class dynamicProgramming {
         // 储存着整个 s1 和 s2 的最小编辑距离
         return dp[m][n];
     }
+
+    /**
+     * LeetCode 1143
+     * @param text1
+     * @param text2
+     * @return
+     */
+    public int longestCommonSubsequence(String text1, String text2) {
+        int n=text1.length(),m=text2.length();
+        int[][] dp=new int[n+1][m+1];
+        for(int i=1;i<=n;i++){
+            for (int j=1;j<=m;j++){
+                if(text1.charAt(i-1)==text2.charAt(j-1)){
+                    dp[i][j]=dp[i-1][j-1]+1;
+                }else {
+                    dp[i][j]=Math.max(dp[i][j-1],dp[i-1][j]);
+                }
+            }
+        }
+        return dp[n][m];
+    }
+
+    /**
+     * LeetCode 583
+     * @param word1
+     * @param word2
+     * @return
+     */
+    public int minDistance1(String word1, String word2){
+        int n=word1.length(),m=word2.length();
+        int[][] dp=new int[n+1][m+1];
+        for(int i=1;i<=n;i++){
+            for (int j=1;j<=m;j++){
+                if(word1.charAt(i-1)==word2.charAt(j-1)){
+                    dp[i][j]=dp[i-1][j-1]+1;
+                }else {
+                    dp[i][j]=Math.max(dp[i][j-1],dp[i-1][j]);
+                }
+            }
+        }
+        return n+m-2*dp[n][m];
+    }
+
+    /**
+     * LeetCode 712
+     * @param s1
+     * @param s2
+     * @return
+     */
+    public int minimumDeleteSum(String s1, String s2) {
+        int n=s1.length(),m=s2.length();
+        int[][] dp=new int[n+1][m+1];
+        for(int i=1;i<=n;i++){
+            dp[i][0]=dp[i-1][0]+ s1.charAt(i-1);
+        }
+        for(int j=1;j<=m;j++){
+            dp[0][j]=dp[0][j-1]+ s2.charAt(j-1);
+        }
+        for(int i=1;i<=n;i++){
+            for (int j=1;j<=m;j++){
+                if(s1.charAt(i-1)==s2.charAt(j-1)){
+                    dp[i][j]=dp[i-1][j-1];
+                }else {
+                    dp[i][j]=Math.min(dp[i][j-1]+s2.charAt(j-1),dp[i-1][j]+s1.charAt(i-1));
+                }
+            }
+        }
+        return dp[n][m];
+/*      变换一下思路，最长公共子序列求的是长度，这题可以改成求公共子串的最大ascii码，
+然后让两个的总和减去两倍的 dp[n][m] 即可
+        int n=s1.length(),m=s2.length();
+        int[][] dp=new int[n+1][m+1];
+        int sum1=0,sum2=0;
+        for(int i=0;i<n;i++){
+            sum1+= s1.charAt(i);
+        }
+        for(int j=0;j<m;j++){
+            sum2+= s2.charAt(j);
+        }
+        for(int i=1;i<=n;i++){
+            for (int j=1;j<=m;j++){
+                if(s1.charAt(i-1)==s2.charAt(j-1)){
+                    dp[i][j]=dp[i-1][j-1]+s1.charAt(i-1);
+                }else {
+                    dp[i][j]=Math.max(dp[i][j-1],dp[i-1][j]);
+                }
+            }
+        }
+        return sum1+sum2-2*dp[n][m];*/
+    }
+
+    /**
+     * LeetCode 10
+     * @param s
+     * @param p
+     * @return
+     */
+    public boolean isMatch(String s, String p) {
+        int n=s.length(),m=p.length();
+        boolean[][] dp=new boolean[n+1][m+1];
+        dp[0][0]=true;
+        for(int i=0;i<=n;i++){
+            for(int j=1;j<=m;j++){
+                if(p.charAt(j-1)=='*'){
+                    if(j >= 2 && i >= 1&&(p.charAt(j - 2) == s.charAt(i - 1) || p.charAt(j - 2) == '.')) {
+                        // 看"x*":p不动s前移一位
+                        dp[i][j] = dp[i - 1][j];
+                        if(j >= 2) {
+                            dp[i][j] |= dp[i][j - 2];
+                        }
+                    }
+                }else {
+                    if (i >= 1 && (s.charAt(i - 1) == p.charAt(j - 1) || p.charAt(j - 1) == '.')) {
+                        dp[i][j] = dp[i - 1][j - 1];
+                    }
+                }
+            }
+        }
+        return dp[n][m];
+    }
+
 }
