@@ -38,26 +38,21 @@ public class houseRobber {
     }
     private int robRange(int[] nums,int start,int end){
         int n=end;
-        int[] dp=new int[end-start];
-        if(end-start<1) return nums[0];
-
+        int[] dp=new int[n];
+        if(n<1) return nums[0];
         dp[0]=nums[start];
-        if(end-start>1)
+        if(n>1)
         dp[1]=Math.max(nums[start],nums[start+1]);
-        for(int i=2;i<end-start;i++){
+        for(int i=2;i<n;i++){
             dp[i]=Math.max(dp[i-1],dp[i-2]+nums[i+start]);
         }
-        return dp[end-start-1];
+        return dp[n-1];
     }
-
-
 
     /**
      * LeetCode 337
      * 小偷又发现了一个新的可行窃的地区。这个地区只有一个入口，我们称之为root。
-     *
      * 除了root之外，每栋房子有且只有一个“父“房子与之相连。一番侦察之后，聪明的小偷意识到“这个地方的所有房屋的排列类似于一棵二叉树”。 如果 两个直接相连的房子在同一天晚上被打劫 ，房屋将自动报警。
-     *
      * 给定二叉树的root。返回在不触动警报的情况下，小偷能够盗取的最高金额。
      * 递归+回溯
      * @param root

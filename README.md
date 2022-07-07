@@ -7,9 +7,9 @@
   - [LeetCode 1011 在D天内送达包裹的能力](https://leetcode.cn/problems/capacity-to-ship-packages-within-d-days/)
   - [LeetCode 410 分割数组的最大值](https://leetcode.cn/problems/split-array-largest-sum/)
 - 打家劫舍（动态规划||递归回溯）-house_Robber
-  - [LeetCode 198]()
-  - [LeetCode 213]()
-  - [LeetCode 337]()
+  - [LeetCode 198 打家劫舍](https://leetcode.cn/problems/house-robber/)
+  - [LeetCode 213 打家劫舍II](https://leetcode.cn/problems/house-robber-ii/)
+  - [LeetCode 337 打家劫舍III](https://leetcode.cn/problems/house-robber-iii/)
 - 单调栈-monotonic_Stack
   - [LeetCode 496 下一个更大的元素I](https://leetcode.cn/problems/next-greater-element-i/)
   - [LeetCode 739 每日温度](https://leetcode.cn/problems/daily-temperatures/)
@@ -30,12 +30,12 @@
   - [LeetCode 438 找到字符串中所有字母异位词](https://leetcode.cn/problems/find-all-anagrams-in-a-string/)
   - [LeetCode 3 无重复字符的最长字串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/)
 - 股票交易（动态规划模板）-stock_Trading
-  - [LeetCode 121]()
-  - [LeetCode 122]()
-  - [LeetCode 309]()
-  - [LeetCode 714]()
-  - [LeetCode 123]()
-  - [LeetCode 188]()
+  - [LeetCode 121 买卖股票的最佳时机](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/)
+  - [LeetCode 122 买卖股票的最佳时机II](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/)
+  - [LeetCode 309 最佳买卖股票时机含冷冻期](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
+  - [LeetCode 714 买卖股票的最佳时机含手续费](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
+  - [LeetCode 123 买卖股票的最佳时机III](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/)
+  - [LeetCode 188 买卖股票的最佳时机IV](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/)
 - 双指针&链表-doublePointer_ListNode
   - [LeetCode 21 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
   - [LeetCode 23 合并K个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/)
@@ -156,6 +156,9 @@
   - [LeetCode 583 两个字符串的删除操作](https://leetcode.cn/problems/delete-operation-for-two-strings/)
   - [LeetCode 712 两个字符串的最小ASCII删除和](https://leetcode.cn/problems/minimum-ascii-delete-sum-for-two-strings/)
   - [LeetCode 10 正则表达式匹配](https://leetcode.cn/problems/regular-expression-matching/)
+- 0-1背包-Backpack
+  - [LeetCode 518 零钱兑换II](https://leetcode.cn/problems/coin-change-2/)
+  - [LeetCode 416 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode
