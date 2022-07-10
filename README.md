@@ -156,6 +156,11 @@
   - [LeetCode 583 两个字符串的删除操作](https://leetcode.cn/problems/delete-operation-for-two-strings/)
   - [LeetCode 712 两个字符串的最小ASCII删除和](https://leetcode.cn/problems/minimum-ascii-delete-sum-for-two-strings/)
   - [LeetCode 10 正则表达式匹配](https://leetcode.cn/problems/regular-expression-matching/)
+  - [LeetCode 877 石子游戏](https://leetcode.cn/problems/stone-game/)
+  - [LeetCode 64 最小路径和](https://leetcode.cn/problems/minimum-path-sum/)
+  - [LeetCode 887 鸡蛋掉落](https://leetcode.cn/problems/super-egg-drop/)
+  - [LeetCode 174 地下城游戏](https://leetcode.cn/problems/dungeon-game/)
+  - [LeetCode 514 自由之路](https://leetcode.cn/problems/freedom-trail/)
 - 0-1背包-Backpack
   - [LeetCode 518 零钱兑换II](https://leetcode.cn/problems/coin-change-2/)
   - [LeetCode 416 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum/)

@@ -1,8 +1,8 @@
 package dynamic_Programming;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Map;
+import org.omg.PortableInterceptor.INACTIVE;
+
+import java.util.*;
 
 /**
  * @author ZGMZC
@@ -306,6 +306,133 @@ public class dynamicProgramming {
             }
         }
         return dp[n][m];
+    }
+
+    /**
+     * LeetCode 877
+     * @param piles
+     * @return
+     */
+    public boolean stoneGame(int[] piles) {
+        int n=piles.length;
+        int[][][] dp=new int[n][n][2];
+        for(int i=0;i<n;i++){
+            dp[i][i][0]=piles[i];
+            dp[i][i][1]=0;
+        }
+        for(int i=n-2;i>=0;i--){
+            for (int j=i+1;j<n;j++){
+                int left=piles[i]+dp[i+1][j][1];
+                int right=piles[j]+dp[i][j-1][1];
+                if (left > right) {
+                    dp[i][j][0] = left;
+                    dp[i][j][1]= dp[i+1][j][0];
+                } else {
+                    dp[i][j][0]= right;
+                    dp[i][j][1] = dp[i][j-1][0];
+                }
+            }
+        }
+        int res=dp[0][n-1][0]-dp[0][n-1][1];
+        return res>0;
+    }
+
+    /**
+     * LeetCode 64
+     * @param grid
+     * @return
+     */
+    public int minPathSum(int[][] grid) {
+        int n=grid.length;
+        int m=grid[0].length;
+        int[][] dp=new int[n][m];
+        dp[0][0]=grid[0][0];
+        for(int i=1;i<n;i++)
+            dp[i][0]=grid[i][0]+dp[i-1][0];
+        for(int j=1;j<m;j++){
+            dp[0][j]=grid[0][j]+dp[0][j-1];
+        }
+        for(int i=1;i<n;i++){
+            for (int j=1;j<m;j++){
+                dp[i][j]=grid[i][j]+Math.min(dp[i-1][j],dp[i][j-1]);
+            }
+        }
+        return dp[n-1][m-1];
+    }
+
+    /**
+     * LeetCode 887
+     * @param k
+     * @param n
+     * @return
+     */
+    public int superEggDrop(int k, int n) {
+        int[][] dp=new int[k+1][n+1];
+        int m;
+        for(m=1;dp[k][m-1]<n;m++){
+            for(int i=1;i<=k;i++){
+                dp[i][m]=dp[i][m-1]+dp[i-1][m-1]+1;
+            }
+        }
+        return m-1;
+    }
+
+    /**
+     * LeetCode 174
+     * @param dungeon
+     * @return
+     */
+    public int calculateMinimumHP(int[][] dungeon) {
+        int n=dungeon.length;
+        int m=dungeon[0].length;
+        int[][] dp=new int[n+1][m+1];
+        for (int i=0;i<=n;i++)
+            Arrays.fill(dp[i],Integer.MAX_VALUE);
+        dp[n][m-1]=dp[n-1][m]=1;
+        for(int i=n-1;i>=0;i--){
+            for (int j=m-1;j>=0;j--){
+                dp[i][j]=Math.max(Math.min(dp[i+1][j],dp[i][j+1])-dungeon[i][j],1);
+            }
+        }
+        return dp[0][0];
+    }
+
+    /**
+     * LeetCode 514
+     * @param ring
+     * @param key
+     * @return
+     */
+    HashMap<Character,List<Integer>> charToIndex=new HashMap<>();
+    int[][] memo;
+    public int findRotateSteps(String ring, String key) {
+        int n=ring.length();
+        int m=key.length();
+        memo=new int[n][m];
+        for (int i=0;i<ring.length();i++){
+            char c=ring.charAt(i);
+            if (!charToIndex.containsKey(c)) {
+                charToIndex.put(c, new LinkedList<>());
+            }
+            charToIndex.get(c).add(i);
+        }
+        return dp(ring,0,key,0);
+    }
+    private int dp(String ring,int i,String key,int j){
+        if(j==key.length()){
+            return 0;
+        }
+        if(memo[i][j]!=0) return memo[i][j];
+        int n=ring.length();
+        int res=Integer.MAX_VALUE;
+        for(int k:charToIndex.get(key.charAt(j))){
+            int delta = Math.abs(k - i);
+            delta = Math.min(delta, n - delta);
+            int subProblem = dp(ring, k, key, j + 1);
+            res = Math.min(res, 1 + delta + subProblem);
+        }
+        memo[i][j]=res;
+        return res;
     }
 
 }
