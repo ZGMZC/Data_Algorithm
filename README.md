@@ -161,9 +161,27 @@
   - [LeetCode 887 鸡蛋掉落](https://leetcode.cn/problems/super-egg-drop/)
   - [LeetCode 174 地下城游戏](https://leetcode.cn/problems/dungeon-game/)
   - [LeetCode 514 自由之路](https://leetcode.cn/problems/freedom-trail/)
+  - [LeetCode 787 K站中转内最便宜的航班](https://leetcode.cn/problems/freedom-trail/)
 - 0-1背包-Backpack
   - [LeetCode 518 零钱兑换II](https://leetcode.cn/problems/coin-change-2/)
   - [LeetCode 416 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum/)
+- 数学问题—Math
+  - [LeetCode 204 计算质数](https://leetcode.cn/problems/count-primes/)
+  - [LeetCode 172 阶乘后的零](https://leetcode.cn/problems/factorial-trailing-zeroes/)
+  - [LeetCode 793 阶乘函数后K个零](https://leetcode.cn/problems/preimage-size-of-factorial-zeroes-function/)
+  - [LeetCode 382 链表随机节点](https://leetcode.cn/problems/linked-list-random-node/)
+  - [LeetCode 398 随机数索引](https://leetcode.cn/problems/random-pick-index/)
+  - [NowCoder 吃葡萄](https://www.nowcoder.com/questionTerminal/14c0359fb77a48319f0122ec175c9ada)
+  - [LeetCode 645 错误的集合](https://leetcode.cn/problems/set-mismatch/)
+- nSum问题-nSum
+  - [LeetCode 15 三数之和](https://leetcode.cn/problems/3sum/)
+  - [LeetCode 18 四数之和](https://leetcode.cn/problems/4sum/)
+- 区间问题-Interval
+  - [LeetCode 1288 删除被覆盖区间](https://leetcode.cn/problems/remove-covered-intervals/)
+  - [LeetCode 56 区间合并](https://leetcode.cn/problems/merge-intervals/)
+  - [LeetCode 986 区间列表的交集](https://leetcode.cn/problems/interval-list-intersections/)
+- 贪心算法-greedy_Algorithm
+  - [LeetCode 134 加油站](https://leetcode.cn/problems/gas-station/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode

@@ -435,4 +435,70 @@ public class dynamicProgramming {
         return res;
     }
 
+    /**
+     * LeetCode 787
+     * @param n
+     * @param flights
+     * @param src
+     * @param dst
+     * @param k
+     * @return
+     */
+    int src,dst;
+    HashMap<Integer,List<int[]>> indegree;
+    public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
+        /*二维数组动态规划*/
+        int[][] dp=new int[k+2][n];
+        for(int i=0;i<k+2;i++)
+            Arrays.fill(dp[i],Integer.MAX_VALUE);
+        dp[0][src]=0;
+        for(int i=1;i<=k+1;i++){
+            for (int[] flight:flights){
+                int j=flight[0],m=flight[1],cost=flight[2];
+                dp[i][m]=Math.min(dp[i][m],dp[i-1][j]+cost);
+            }
+        }
+        int res=Integer.MAX_VALUE;
+        for(int i=1;i<=k+1;i++){
+            res=Math.min(res,dp[i][dst]);
+        }
+        return res==Integer.MAX_VALUE?-1:res;
+
+        //从上到下的 动态规划
+/*        k++;
+        this.src=src;
+        this.dst=dst;
+        memo=new int[n][k+1];
+        for(int[] row:memo){
+            Arrays.fill(row,-11);
+        }
+        indegree=new HashMap<>();
+        for(int[] f:flights){
+            int from=f[0];
+            int to=f[1];
+            int price=f[2];
+            indegree.putIfAbsent(to,new LinkedList<>());
+            indegree.get(to).add(new int[]{from,price});
+        }
+        return dp(dst,k);*/
+
+    }
+    private int dp(int s,int k){
+        if(s==src) return 0;
+        if(k==0)  return -1;
+        if(memo[s][k]!=-11) return memo[s][k];
+
+        int res=Integer.MAX_VALUE;
+        if(indegree.containsKey(s)){
+            for(int[] v:indegree.get(s)){
+                int from=v[0];
+                int price=v[1];
+                int subProblem=dp(from,k-1);
+                if(subProblem!=-1)
+                    res=Math.min(res,subProblem+price);
+            }
+        }
+        memo[s][k]= res==Integer.MAX_VALUE?-1:res;
+        return memo[s][k];
+    }
 }
