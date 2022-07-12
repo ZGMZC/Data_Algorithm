@@ -182,6 +182,13 @@
   - [LeetCode 986 区间列表的交集](https://leetcode.cn/problems/interval-list-intersections/)
 - 贪心算法-greedy_Algorithm
   - [LeetCode 134 加油站](https://leetcode.cn/problems/gas-station/)
+  - [LeetCode 1024 视频拼接](https://leetcode.cn/problems/video-stitching/)
+  - [LeetCode 659 分割数组为连续子序列](https://leetcode.cn/problems/split-array-into-consecutive-subsequences/)
+  - [LeetCode 391 完美矩形](https://leetcode.cn/problems/perfect-rectangle/)
+- 分治算法-partitioning_Algorithm
+  - [LeetCode 241 为运算表达式设计优先级](https://leetcode.cn/problems/different-ways-to-add-parentheses/)
+- 扫描线技巧-scan_Line(差分数组变种)
+  - [LeetCode 253 会议室II](https://leetcode.cn/problems/meeting-rooms-ii/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode
