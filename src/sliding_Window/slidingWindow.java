@@ -10,10 +10,10 @@ import java.util.Map;
  */
 public class slidingWindow {
     public void Frame(String s, String t) {
-        Map<Character, Integer> tmap = new HashMap<>();
-        Map<Character, Integer> wmap = new HashMap<>();
+        Map<Character, Integer> need = new HashMap<>();
+        Map<Character, Integer> window = new HashMap<>();
         for (char c : t.toCharArray())
-            tmap.put(c, tmap.getOrDefault(c, 0) + 1);
+            need.put(c, need.getOrDefault(c, 0) + 1);
         int left = 0, right = 0;
         //valid 表示目前窗口中满足字符串t条件的字符个数
         int valid = 0;
