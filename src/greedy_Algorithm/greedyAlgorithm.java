@@ -135,4 +135,47 @@ public class greedyAlgorithm {
     private String point(int x, int y){
         return String.format("%d,%d",x,y);
     }
+
+    /**
+     * LeetCode 435
+     * @param intervals
+     * @return
+     */
+    public int eraseOverlapIntervals(int[][] intervals) {
+        return intervals.length-intervalSchedule(intervals);
+    }
+    private int intervalSchedule(int[][] intervals){
+        if(intervals.length==0) return 0;
+        Arrays.sort(intervals,(a,b)->a[1]-b[1]);
+        int count=1;
+        int end=intervals[0][1];
+        for(int[] interval:intervals){
+            int start=interval[0];
+            if(start>=end){
+                count++;
+                end=interval[1];
+            }
+        }
+        return count;
+    }
+
+    /**
+     * LeetCode 452
+     * @param points
+     * @return
+     */
+    public int findMinArrowShots(int[][] points) {
+        Arrays.sort(points,(a,b)->(a[1]<b[1]?-1:1));
+        long end=points[0][1];
+        int n=points.length;
+        int count=1;
+        for(int i=0;i<n;i++){
+            long start=points[i][0];
+            if(start>end){
+                count++;
+                end=points[i][1];
+            }
+        }
+        return count;
+    }
 }

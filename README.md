@@ -133,6 +133,7 @@
   - [LeetCode 40 组合总数II](https://leetcode.cn/problems/combination-sum-ii/)
   - [LeetCode 47 全排列II](https://leetcode.cn/problems/permutations-ii/)
   - [LeetCode 39 组合综合](https://leetcode.cn/problems/combination-sum/)
+  - [LeetCode 494 目标和](https://leetcode.com/problems/target-sum)
 - 岛屿问题-island_Issues
   - [LeetCode 200 岛屿数量](https://leetcode.cn/problems/number-of-islands/)
   - [LeetCode 1254 统计封闭岛屿的数目](https://leetcode.cn/problems/number-of-closed-islands/)
@@ -161,7 +162,10 @@
   - [LeetCode 887 鸡蛋掉落](https://leetcode.cn/problems/super-egg-drop/)
   - [LeetCode 174 地下城游戏](https://leetcode.cn/problems/dungeon-game/)
   - [LeetCode 514 自由之路](https://leetcode.cn/problems/freedom-trail/)
-  - [LeetCode 787 K站中转内最便宜的航班](https://leetcode.cn/problems/freedom-trail/)
+  - [LeetCode 787 K站中转内最便宜的航班](https://leetcode.cn/problems/cheapest-flights-within-k-stops/)
+  - [LeetCode 312 戳气球](https://leetcode.cn/problems/burst-balloons/)
+  - [LeetCode 516 最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/)
+  - [LeetCode 1312 让字符串成为回文串的最少插入次数](https://leetcode.cn/problems/minimum-insertion-steps-to-make-a-string-palindrome/)
 - 0-1背包-Backpack
   - [LeetCode 518 零钱兑换II](https://leetcode.cn/problems/coin-change-2/)
   - [LeetCode 416 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum/)
@@ -185,6 +189,8 @@
   - [LeetCode 1024 视频拼接](https://leetcode.cn/problems/video-stitching/)
   - [LeetCode 659 分割数组为连续子序列](https://leetcode.cn/problems/split-array-into-consecutive-subsequences/)
   - [LeetCode 391 完美矩形](https://leetcode.cn/problems/perfect-rectangle/)
+  - [LeetCode 435 无重叠区间](https://leetcode.cn/problems/non-overlapping-intervals/)
+  - [LeetCode 452 用最少数量的箭引爆气球](https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/)
 - 分治算法-partitioning_Algorithm
   - [LeetCode 241 为运算表达式设计优先级](https://leetcode.cn/problems/different-ways-to-add-parentheses/)
 - 扫描线技巧-scan_Line(差分数组变种)
