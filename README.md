@@ -82,6 +82,7 @@
   - [LeetCode 889 从前序和后续遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal/)
   - [LeetCode 297 二叉树的序列化与反序列化](https://leetcode.cn/problems/serialize-and-deserialize-binary-tree/)
   - [LeetCode 652 寻找重复的子树](https://leetcode.cn/problems/find-duplicate-subtrees/)
+  - [LeetCode 222 完全二叉树的节点个数](https://leetcode.cn/problems/count-complete-tree-nodes/)
 - 二叉搜索树-binarysearch_Tree
   - [LeetCode 230 二叉搜索树中第K小的元素](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/)
   - [LeetCode 538 把二叉搜索树转换为累加树](https://leetcode.cn/problems/convert-bst-to-greater-tree/)
