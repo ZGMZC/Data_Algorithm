@@ -312,4 +312,45 @@ public class Backtrack {
         backtrack(nums,target,num+nums[start],start+1);
         backtrack(nums,target,num-nums[start],start+1);
     }
+
+    /**
+     * LeetCode 37
+     * @param board
+     */
+    public void solveSudoku(char[][] board) {
+        backtrack(board,0,0);
+    }
+    private boolean backtrack(char[][] board,int i,int j){
+        int n=9,m=9;
+        if(j==m){
+            return backtrack(board,i+1,0);
+        }
+        if(i==n) return true;
+        if (board[i][j] != '.') {
+            return backtrack(board, i, j + 1);
+        }
+        for (char ch = '1'; ch <= '9'; ch++) {
+            // 如果遇到不合法的数字，就跳过
+            if (!isValid(board, i, j, ch))
+                continue;
+            board[i][j] = ch;
+            if (backtrack(board, i, j + 1)) {
+                return true;
+            }
+            board[i][j] = '.';
+        }
+        return false;
+    }
+    private boolean isValid(char[][] board, int r, int c, char n){
+        for (int i = 0; i < 9; i++) {
+            // 判断行是否存在重复
+            if (board[r][i] == n) return false;
+            // 判断列是否存在重复
+            if (board[i][c] == n) return false;
+            // 判断 3 x 3 方框是否存在重复
+            if (board[(r/3)*3 + i/3][(c/3)*3 + i%3] == n)
+                return false;
+        }
+        return true;
+    }
 }
