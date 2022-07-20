@@ -136,6 +136,7 @@
   - [LeetCode 39 组合综合](https://leetcode.cn/problems/combination-sum/)
   - [LeetCode 494 目标和](https://leetcode.com/problems/target-sum)
   - [LeetCode 37 解数独](https://leetcode.cn/problems/sudoku-solver/)
+  - [LeetCode 22 括号生成](https://leetcode.cn/problems/generate-parentheses/)
 - 岛屿问题-island_Issues
   - [LeetCode 200 岛屿数量](https://leetcode.cn/problems/number-of-islands/)
   - [LeetCode 1254 统计封闭岛屿的数目](https://leetcode.cn/problems/number-of-closed-islands/)

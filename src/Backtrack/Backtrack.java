@@ -353,4 +353,29 @@ public class Backtrack {
         }
         return true;
     }
+
+    /**
+     * LeetCode
+     */
+    List<String> res6=new LinkedList<>();
+    String path6="";
+    int n;
+    public List<String> generateParenthesis(int n) {
+        this.n=2*n;
+        backtrack(path6,0,0,0);
+        return res6;
+    }
+    private void backtrack(String path,int left,int right,int step){
+        if(right>left) return;
+        if(step==n){
+            if(left==right){
+                res6.add(new String(path6));
+                return;
+            }else{
+                return;
+            }
+        }
+        backtrack(path6+"(",left+1,right,step+1);
+        backtrack(path6+")",left,right+1,step+1);
+    }
 }
