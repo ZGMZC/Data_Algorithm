@@ -198,6 +198,11 @@
   - [LeetCode 241 为运算表达式设计优先级](https://leetcode.cn/problems/different-ways-to-add-parentheses/)
 - 扫描线技巧-scan_Line(差分数组变种)
   - [LeetCode 253 会议室II](https://leetcode.cn/problems/meeting-rooms-ii/)
+- 位运算-bit_Operations
+  - [LeetCode 191 位1的个数](https://leetcode.cn/problems/number-of-1-bits/)
+  - [LeetCode 231 2的幂](https://leetcode.cn/problems/power-of-two/)
+  - [LeetCode 136 只出现一次的数字](https://leetcode.cn/problems/single-number/)
+  - [LeetCode 268 丢失的数字](https://leetcode.cn/problems/missing-number/)
 - 通用工具类-common_Utils
   - 树结点-TreeNode
   - 单链表结点-ListNode
