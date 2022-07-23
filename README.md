@@ -1,5 +1,5 @@
 ### 力扣刷题笔记
-> 笔者只写出了Java版本的模板，LeetCode对应题型已AC，但是还有很多可以优化的地方，如动态规划中可以使用变量储存相邻的那个状态等
+> 目前只写出了Java版本的模板，LeetCode对应题型已AC，但是还有很多可以优化的地方，如动态规划中可以使用变量储存相邻的那个状态等
 - 二分查找-binary_Search
   - [LeetCode 34 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/)
   - [LeetCode 704 二分查找](https://leetcode.cn/problems/binary-search/)
@@ -169,6 +169,7 @@
   - [LeetCode 312 戳气球](https://leetcode.cn/problems/burst-balloons/)
   - [LeetCode 516 最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/)
   - [LeetCode 1312 让字符串成为回文串的最少插入次数](https://leetcode.cn/problems/minimum-insertion-steps-to-make-a-string-palindrome/)
+  - [LeetCode 292 Nim游戏](https://leetcode.cn/problems/nim-game/)
 - 0-1背包-Backpack
   - [LeetCode 518 零钱兑换II](https://leetcode.cn/problems/coin-change-2/)
   - [LeetCode 416 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum/)
@@ -180,6 +181,8 @@
   - [LeetCode 398 随机数索引](https://leetcode.cn/problems/random-pick-index/)
   - [NowCoder 吃葡萄](https://www.nowcoder.com/questionTerminal/14c0359fb77a48319f0122ec175c9ada)
   - [LeetCode 645 错误的集合](https://leetcode.cn/problems/set-mismatch/)
+  - [LeetCode 372 超级次方](https://leetcode.cn/problems/super-pow/)
+  - [LeetCode 319 灯泡开关](https://leetcode.cn/problems/bulb-switcher/)
 - nSum问题-nSum
   - [LeetCode 15 三数之和](https://leetcode.cn/problems/3sum/)
   - [LeetCode 18 四数之和](https://leetcode.cn/problems/4sum/)

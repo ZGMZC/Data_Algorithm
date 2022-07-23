@@ -566,4 +566,23 @@ public class dynamicProgramming {
         }
         return dp[0][n-1];
     }
+
+    /**
+     * LeetCode 292
+     * 该方法会超时，应采取数学方法
+     * @param n
+     * @return
+     */
+    public boolean canWinNim(int n){
+        //dp[i]=false,代表还剩i个石头时，输掉比赛
+        boolean[] dp=new boolean[n+1];
+        dp[0]=false;
+        dp[1]=true;
+        dp[2]=true;
+        dp[3]=true;
+        for (int i=4;i<=n;i++){
+            dp[i]= !dp[i-1] || !dp[i-2] || !dp[i-3];
+        }
+        return dp[n];
+    }
 }

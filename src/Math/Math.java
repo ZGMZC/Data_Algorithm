@@ -170,4 +170,40 @@ public class Math {
                 missing = i + 1;
         return new int[]{dup, missing};
     }
+
+    /**
+     * LeetCode 372
+     * @param a
+     * @param b
+     * @return
+     */
+    static final int MOD=1337;
+    public int superPow(int a, int[] b) {
+        int ans = 1;
+        for (int i = b.length - 1; i >= 0; --i) {
+            ans = (int) ((long) ans * pow(a, b[i]) % MOD);
+            a = pow(a, 10);
+        }
+        return ans;
+    }
+    public int pow(int x, int n) {
+        int res = 1;
+        while (n != 0) {
+            if (n % 2 != 0) {
+                res = (int) ((long) res * x % MOD);
+            }
+            x = (int) ((long) x * x % MOD);
+            n /= 2;
+        }
+        return res;
+    }
+
+    /**
+     * LeetCode 319
+     * @param n
+     * @return
+     */
+    public int bulbSwitch(int n) {
+        return (int)java.lang.Math.sqrt(n);
+    }
 }
