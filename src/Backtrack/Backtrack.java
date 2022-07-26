@@ -378,4 +378,45 @@ public class Backtrack {
         backtrack(path6+"(",left+1,right,step+1);
         backtrack(path6+")",left,right+1,step+1);
     }
+
+    /**
+     * LeetCode 969
+     * @param arr
+     * @return
+     */
+    List<Integer> res7=new LinkedList<>();
+    public List<Integer> pancakeSort(int[] arr) {
+        sort(arr,arr.length);
+        return res7;
+    }
+    private void sort(int[] cakes,int n){
+        if(n==1) return;
+
+        //寻找最大饼的索引
+        int maxCake=0;
+        int maxCakeIndex=0;
+        for(int i=0;i<n;i++){
+            if(cakes[i]>maxCake){
+                maxCake=cakes[i];
+                maxCakeIndex=i;
+            }
+        }
+        //第一次反转,将最大饼翻到上面
+        reverse(cakes,0,maxCakeIndex);
+        res7.add(maxCakeIndex+1);
+        //第二次翻转，将最大饼翻到最下面
+        reverse(cakes,0,n-1);
+        res7.add(n);
+        sort(cakes,n-1);
+    }
+    private void reverse(int[] arr,int i,int j){
+        while (i<j){
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+            i++;
+            j--;
+        }
+    }
+
 }

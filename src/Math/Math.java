@@ -3,6 +3,7 @@ package Math;
 import common_Utils.ListNode;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
@@ -206,4 +207,36 @@ public class Math {
     public int bulbSwitch(int n) {
         return (int)java.lang.Math.sqrt(n);
     }
+
+    /**
+     * LeetCode 43
+     * @param num1
+     * @param num2
+     * @return
+     */
+    public String multiply(String num1, String num2) {
+        int n=num1.length();
+        int m=num2.length();
+        int[] res=new int[n+m];
+        Arrays.fill(res,0);
+        for(int i=n-1;i>=0;i--){
+            for(int j=m-1;j>=0;j--){
+                int mul=(num1.charAt(i)-'0')*(num2.charAt(j)-'0');
+                int p1=i+j,p2=i+j+1;
+                int sum=mul+res[p2];
+                res[p2]=sum%10;
+                res[p1]+=sum/10;
+            }
+        }
+        //结果前缀可能存0
+        int i=0;
+        while (i<res.length&&res[i]==0)
+            i++;
+        StringBuilder s= new StringBuilder();
+        for(;i<res.length;i++){
+            s.append(res[i]);
+        }
+        return s.length()==0?"0": s.toString();
+    }
+
 }

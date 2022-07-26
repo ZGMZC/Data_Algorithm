@@ -181,4 +181,65 @@ public class doublePointerArray {
         }
         return res;
     }
+
+    /**
+     * LeetCode 42
+     * @param height
+     * @return
+     */
+    public int trap(int[] height) {
+        int left=0,right=height.length-1;
+        int l_max=0,r_max=0;
+        int res=0;
+        while (left<right){
+            l_max=Math.max(height[left],l_max);
+            r_max=Math.max(height[right],r_max);
+            //res+= Math.min(l_max,r_max)-height[i];
+            if(l_max<r_max){
+                res+=l_max-height[left];
+                left++;
+            }else {
+                res+=r_max-height[right];
+                right--;
+            }
+        }
+        return res;
+    }
+
+    /**
+     * LeetCode 11
+     * @param height
+     * @return
+     */
+    public int maxArea(int[] height) {
+        int left=0,right=height.length-1;
+        int res=0;
+        while(left<right){
+            if(height[left]<height[right]){
+                res=Math.max(res,height[left]*(right-left));
+                left++;
+            }else{
+                res=Math.max(res,height[right]*(right-left));
+                right--;
+            }
+        }
+        return res;
+    }
+
+    /**
+     * LeetCode 392
+     * @param s
+     * @param t
+     * @return
+     */
+    public boolean isSubsequence(String s, String t) {
+        int i=0,j=0;
+        while(i<s.length()&&j<t.length()){
+            if(s.charAt(i)==t.charAt(j)){
+                i++;
+            }
+            j++;
+        }
+        return i==s.length();
+    }
 }

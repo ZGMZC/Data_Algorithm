@@ -53,6 +53,9 @@
   - [LeetCode 344 反转字符串](https://leetcode.cn/problems/reverse-string/)
   - [LeetCode 5 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
   - [LeetCode 870 优势洗牌](https://leetcode.cn/problems/advantage-shuffle/)
+  - [LeetCode 42 接雨水](https://leetcode.cn/problems/trapping-rain-water/)
+  - [LeetCode 11 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/)
+  - [LeetCode 392 判断子序列](https://leetcode.cn/problems/is-subsequence/)
 - 括号相关-valid_Parentheses
   - [LeetCode 20 有效的括号](https://leetcode.cn/problems/valid-parentheses/)
   - [LeetCode 921 使括号有效的最少添加](https://leetcode.cn/problems/minimum-add-to-make-parentheses-valid/)
@@ -66,6 +69,7 @@
   - [LeetCode 224 基本计算器](https://leetcode.cn/problems/basic-calculator/)
   - [LeetCode 227 基本计算器II](https://leetcode.cn/problems/basic-calculator-ii/)
   - [LeetCode 772 基本计算器III](https://leetcode.cn/problems/basic-calculator-iii/)
+  - [LeetCode 855 考场就座](https://leetcode.cn/problems/exam-room/)
 - 链表递归-listnode_Recursion
   - [LeetCode 206 反转链表](https://leetcode.cn/problems/reverse-linked-list/)
   - [LeetCode 92 反转链表II](https://leetcode.cn/problems/reverse-linked-list-ii/)
@@ -137,6 +141,7 @@
   - [LeetCode 494 目标和](https://leetcode.com/problems/target-sum)
   - [LeetCode 37 解数独](https://leetcode.cn/problems/sudoku-solver/)
   - [LeetCode 22 括号生成](https://leetcode.cn/problems/generate-parentheses/)
+  - [LeetCode 969 煎饼排序](https://leetcode.cn/problems/pancake-sorting/)
 - 岛屿问题-island_Issues
   - [LeetCode 200 岛屿数量](https://leetcode.cn/problems/number-of-islands/)
   - [LeetCode 1254 统计封闭岛屿的数目](https://leetcode.cn/problems/number-of-closed-islands/)
@@ -183,6 +188,7 @@
   - [LeetCode 645 错误的集合](https://leetcode.cn/problems/set-mismatch/)
   - [LeetCode 372 超级次方](https://leetcode.cn/problems/super-pow/)
   - [LeetCode 319 灯泡开关](https://leetcode.cn/problems/bulb-switcher/)
+  - [LeetCode 43 字符串相乘](https://leetcode.cn/problems/multiply-strings/)
 - nSum问题-nSum
   - [LeetCode 15 三数之和](https://leetcode.cn/problems/3sum/)
   - [LeetCode 18 四数之和](https://leetcode.cn/problems/4sum/)
