@@ -564,16 +564,40 @@ class Calcultor{
         return Character.isDigit(c);
     }
 }
+
+/**
+ * LeetCode 855
+ */
 class ExamRoom{
+    int N;
+    TreeSet<Integer> students;
     public ExamRoom(int n) {
-
+        this.N=n;
+        students=new TreeSet<>();
     }
-
     public int seat() {
-        return 0;
+        int student=0;
+        if(students.size()>0){
+            int dist=students.first();
+            Integer prev=null;
+            for(Integer s:students){
+                if(prev!=null){
+                    int d=(s-prev)/2;
+                    if(d>dist){
+                        dist=d;
+                        student=prev+d;
+                    }
+                }
+                prev=s;
+            }
+            if(N-1-students.last()>dist){
+                student=N-1;
+            }
+        }
+        students.add(student);
+        return student;
     }
-
     public void leave(int p) {
-
+        students.remove(p);
     }
 }
