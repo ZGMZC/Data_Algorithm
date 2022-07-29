@@ -542,7 +542,7 @@ class Calcultor {
                     int num = 0;
                     int j = i;
                     while (j < n && isNumber(cs[j])) {
-                        num = num * 10 + cs[j] - '0';
+                        num = num * 10 + (cs[j] - '0');
                         j++;
                     }
                     nums.addLast(num);
@@ -553,7 +553,7 @@ class Calcultor {
                     // 有一个新操作要入栈时，先把栈内可以算的都算了
                     // 只有满足「栈内运算符」比「当前运算符」优先级高/同等，才进行运算
                     while (!ops.isEmpty() && ops.peekLast() != '(') {
-                        char prev = ops.pollLast();
+                        char prev = ops.peekLast();
                         if (map.get(prev) >= map.get(c)) {
                             calc(nums, ops);
                         } else break;
@@ -622,8 +622,8 @@ class ExamRoom {
         students.add(student);
         return student;
     }
-
     public void leave(int p) {
         students.remove(p);
     }
 }
+
